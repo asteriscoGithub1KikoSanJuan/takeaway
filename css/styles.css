@@ -25,3 +25,10 @@ li a {
     display: block;
     width: 60px;
 }
+
+.btn-floating li {
+	text-align: center;
+}
+.card-title {
+	margin-top:5px important! ;
+}
