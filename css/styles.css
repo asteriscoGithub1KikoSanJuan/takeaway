@@ -1,3 +1,11 @@
-#ensaladas .card-reveal {background-color: rgba(95,158,160,0.7);
+#ensaladas .card-reveal {background-color: rgba(128, 203, 196, 0.72);
 						color:white;
 }
+#principales .card-reveal {background-color: rgba(255, 204, 128, 0.72);
+						color:white;
+}
+#postres .card-reveal {background-color: rgba(255, 241, 118, 0.72);
+						color:grey;
+}
+
+.page-footer .container p {margin-bottom: 4px; margin-top: 4px}
