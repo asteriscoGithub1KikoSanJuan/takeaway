@@ -9,3 +9,19 @@
 }
 
 .page-footer .container p {margin-bottom: 4px; margin-top: 4px}
+
+.fa-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+}
+
+li a {
+    display: block;
+}
+
+.fa-ul li a {
+    display: block;
+    width: 60px;
+}
