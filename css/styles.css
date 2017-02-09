@@ -1,4 +1,8 @@
-#ensaladas .card-reveal {background-color: rgba(128, 203, 196, 0.72);
+body {
+	background-color: #f3e5f5;
+}
+
+#ensaladas .card-reveal {background-color: rgb(128, 203, 196);
 						color:white;
 }
 #principales .card-reveal {background-color: rgba(255, 204, 128, 0.72);
@@ -10,25 +14,17 @@
 
 .page-footer .container p {margin-bottom: 4px; margin-top: 4px}
 
-.fa-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 60px;
+.btn-floating {
+	text-align:center;display:block;
 }
 
-li a {
-    display: block;
+.fixed-action-btn {
+	text-align:center;display:block;
 }
 
-.fa-ul li a {
-    display: block;
-    width: 60px;
-}
-
-.btn-floating li {
-	text-align: center;
-}
-.card-title {
-	margin-top:5px important! ;
+.actions li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  font-size: 1.2em;
 }
