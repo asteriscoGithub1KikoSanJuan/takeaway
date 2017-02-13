@@ -48,3 +48,20 @@ body {
   z-index: 100;
   /* text-align: left; */
 }
+
+.submenu {
+		position: absolute;
+		z-index: 100;
+		opacity: 0;
+		transition: all 1 ease-in 15s;
+		visibility: hidden;
+}
+
+.submenu li {
+	float: none;
+	background-color: blue;
+}
+
+.desplegable:hover .submenu {opacity: 1;
+							visibility: visible;
+}
