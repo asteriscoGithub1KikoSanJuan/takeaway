@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
   <html>
     <head>
       <!--Import Google Icon Font-->
@@ -12,57 +11,69 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="css/styles.css">
     </head>
-
     <body>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>-->
-    
-	<nav>
+		console.log("Esto es un mensaje por consola");
+		console.warn("Mensaje de advertencia!");
+		console.error("mensaje de error");
+	<script>
+		$(document).ready(function(){
+		$('.carousel.carousel-slider').carousel({fullWidth: true});
+			console.log("pagina cargada")
+		});		
+	</script>
+	 <nav>
     <div class="nav-wrapper  teal lighten-3">
       <a href="#" class="brand-logo"><img src="img/butlerx.png">takeAway</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html"><img src="img/menux.png"></a></li>
+        <li class="desplegable">
+		  <a href="index.html"><img src="img/menux.png"></a>
+			<ul class="submenu">
+						<li><a href="#">Ensaladas</a></li>
+						<li><a href="#">Principales</a></li>
+						<li><a href="#">Postres</a></li>
+			</ul>
+		</li>
         <li><a href="info.html"><img src="img/infox.png"></a></li>
         <li><a href="fotos.html"><img src="img/fotox.png"></a></li>
         <li><a href="#"><img src="img/cashx.png"></a></li>
       </ul>
     </div>
-  </nav>
-  <div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="http://localhost/takeaway/img/rest/panorama.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>Nuestro Panorama es imprecionante</h3>
-          <h5 class="light grey-text text-lighten-3">Bueno nosotros trabajamos aqui, vosotros comeis en casa!</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://localhost/takeaway/img/rest/restaurante.jpg"> <!-- random image -->
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://localhost/takeaway/img/rest/el-pote-restaurante-5.jpg"> <!-- random image -->
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="http://localhost/takeaway/img/ensaladaCaprichosa.jpg"> <!-- random image -->
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
+  </nav> 
+	 <section id="carrmovil hide-on-med-and-up">
+		<div class="carousel carousel-slider center" data-indicators="true">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <h2>First Panel</h2>
+      <p class="white-text">This is your first panel</p>
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <h2>Second Panel</h2>
+      <p class="white-text">This is your second panel</p>
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <h2>Third Panel</h2>
+      <p class="white-text">This is your third panel</p>
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <h2>Fourth Panel</h2>
+      <p class="white-text">This is your fourth panel</p>
+    </div>
   </div>
-  <footer class="page-footer teal lighten-2">
+	 </section>
+	 <section id="carousel hide-on-small-only">
+	  <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
+    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
+    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
+    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
+  </div>
+	</section>
+<!--######################################################################################################################################-->       <footer class="page-footer teal lighten-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -71,15 +82,31 @@
                 <p class="grey-text text-lighten-4">E 08800 Vilanova i la Geltr&uacute;</p>
                 <p class="grey-text text-lighten-4"><img src="img/phonex.png"> 666 666 666 &nbsp;&nbsp;&nbsp;servicio@takeaway.es</p>
               </div>
-              <div class="col l4 offset-l2 s12">
+			 <div class="col l4 offset-l2 s12">
                <!-- <h5 class="white-text">white</h5> -->
-				  <ul class="fa-ul">
+				  <span class="actions">
+  					<ul>
+      					<li><i class="fa fa-facebook fa-2x"></i></li>
+      					<li><i class="fa fa-twitter fa-2x"></i></li>
+      					<li><i class="fa fa-google-plus fa-2x"></i></li>
+      					<li><i class="fa fa-youtube fa-2x"></i></li>
+      					<li><i class="fa fa-instagram fa-2x"></i></li>
+      					<li><i class="fa fa-linkedin fa-2x"></i></li>
+      					<li><i class="fa fa-pinterest fa-2x"></i></li>
+      					<li><i class="fa fa-tumblr fa-2x"></i></li>
+      					<li><i class="fa fa-vine fa-2x"></i></li>
+      					<li><i class="fa fa-snapchat fa-2x"></i></li>
+      					<li><i class="fa fa-reddit fa-2x"></i></li>
+  					</ul>
+				  </span>
+				  <!--<ul class="fa-ul">
   					<li><i class="fa-li fa fa-facebook fa-2x"></i></li><br><br>
 					<li><i class="fa-li fa fa-twitter fa-2x"></i></li><br><br>
 					<li><i class="fa-li fa fa-google-plus fa-2x"></i></li><br><br>
+					<li><i class="fa-li fa fa-facebook fa-2x"></i></li><br><br>
 					<li><i class="fa-li fa fa-wheelchair fa-2x"></i></li><br><br>
 					<li><i class="fa-li fa fa-thump-up fa-2x"></i></li>
-				 </ul>
+				 </ul>-->
               </div>
             </div>
           </div>
