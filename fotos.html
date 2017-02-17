@@ -10,19 +10,40 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="css/styles.css">
+	  <style>
+		html, body, .block {
+			height: 100%;
+			}
+		nav ul li a:hover, nav ul li a.active {
+			background-color: rgba(0,0,0,.1);
+			}
+		footer {
+			padding-left: 0;
+			}
+		.margintop{margin-top:10px}	
+		.nav{z-index:200;}
+	  </style>
     </head>
     <body>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-		console.log("Esto es un mensaje por consola");
-		console.warn("Mensaje de advertencia!");
-		console.error("mensaje de error");
 	<script>
-		$(document).ready(function(){
-		$('.carousel.carousel-slider').carousel({fullWidth: true});
-			console.log("pagina cargada")
-		});		
+		 $(document).ready(function(){
+			$('.pushpin-demo-nav').each(function() {
+				var $this = $(this);
+				var $target = $('#' + $(this).attr('data-target'));
+				$this.pushpin({
+					top: $target.offset().top,
+					bottom: $target.offset().top + $target.outerHeight() - $this.height()
+				});
+			}); 
+		$('.target').pushpin({
+			top: 0,
+			bottom: 1000,
+			offset: 0
+			});
+		});
 	</script>
 	 <nav>
     <div class="nav-wrapper  teal lighten-3">
@@ -42,38 +63,266 @@
       </ul>
     </div>
   </nav> 
-	 <section id="carrmovil hide-on-med-and-up">
-		<div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+<body><div id="blue" class="block teal lighten-4">
+  <nav class="pushpin-demo-nav teal lighten-3 white-text" data-target="blue">
+    <div class="nav-wrapper teal lighten-3">
+      <div class="container">
+        <a href="#" class="brand-logo teal lighten-3 white-text">Ensaladas</a>
+      </div>
     </div>
-    <div class="carousel-item red white-text" href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">This is your first panel</p>
+  </nav>
+	 <section id="ensaladas">
+	<!--<h2 class="center-align teal lighten-3 white-text">Ensaladas</h2>-->
+	<div class="row margintop">
+		<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/ensaladaCaprichosa.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 13px; right: 13px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Ensalada Caprichosa<i class="material-icons right">close</i></span>
+					<p>Deliciosa combinaci&oacute;n gracias a la base vegetal, rica en vitaminas, al jam&oacute;n dulce y al queso, que aportan 
+						prote&iacute;nas y calcio al plato. El toque dulce del ma&iacute;z y la zanahoria dan un sabor agradable en boca.</p>
+				</div>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------------------------------------>
+		<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Ensalada de Pasta</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/ensaladaPasta.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Ensalada de Pasta<i class="material-icons right">close</i></span>
+					<p>Ensalada fresca con la base de pasta Fusilli, junto con el at&uacute;n y las hortalizas forman un plato completo. 
+						Acompa&ntilde;ado con mayonesa.</p>
+				</div>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Ensalada de Arroz</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/ensaladaArroz.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Ensalada de Arroz<i class="material-icons right">close</i></span>
+					<p>Deliciosa y refrescante ensalada de arroz, donde a&ntilde;adimos unos taquitos de jam&oacute;n cocido y verduritas que 
+						equilibran el plato.</p>
+				</div> 
+			</div>
+		</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------->			<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Ensalada Ceasar</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/ensaladaCeasar.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Ensalada Caesar<i class="material-icons right">close</i></span>
+					<p>Has probado ya nuestra ensalada cl&aacute;sica? Con base vegetal rica en vitaminas, pollo rebozado crujiente y queso que nos 
+						ofrece una buena fuente de calcio. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+  </section>
+</div>
+
+<div id="red" class="block teal lighten-4">
+  <nav class="pushpin-demo-nav" data-target="red">
+    <div class="nav-wrapper teal lighten-3 white-text">
+      <div class="container">
+        <a href="#" class="brand-logo teal lighten-3 white-text">Platos Principales</a>
+        </ul>
+      </div>
     </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
+  </nav>
+    <section id="principales">
+	<!--<h2 class="center-align orange lighten-3 white-text">Platos Principales</h2>-->
+	<div class="row">
+<!------------------------------------------------------------------------------------------------------------------------------------------>
+			<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Alb&oacute;ndigas</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/principalAlbondiga.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Alb&oacute;ndigas<i class="material-icons right">close</i></span>
+					<p>Alb&oacute;ndigas (54%) [carne de cerdo, carne de vacuno, tocino, pan de molde (harina de trigo , agua, manteca de cerdo, sal, levadura, dextrosa, emulgentes (E471, E472e), prote&iacute;nas de la leche, lactosa , harina de soja, harina de malta de trigo y conservador (E330)], nata l&iacute;quida UHT (nata y estabilizante (E407)), huevo pasteurizado, pan rallado (harina de trigo, agua, levadura y sal), sal, perejil, ajo y pimienta negra], salsa (46%) [caldo de carne (agua, carcasa de pollo, hueso de ternera, zanahoria, cebolla, patata, apio , puerro y huesos de jam&oacute;n) tomate, cebolla, guisantes, zanahoria, vino blanco (contiene sulfitos), aceite de orujo de oliva, ajo, sal y az&uacute;car].</p>
+				</div>
+			</div>
+		</div>
+<!------------------------------------------------------------------------------------------------------------------------------------------>
+			<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Lomo asado</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/principalLomo.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Lomo asado<i class="material-icons right">close</i></span>
+					<p>Lomo de cerdo (46%), cebolla, zanahoria, tomate, puerro, caldo de carne (agua, pollo, vacuno, zanahoria, cebolla, patata, apio , puerro y hueso de jamón), vino negro (contiene sulfitos ), ajo y especias.</p>
+				</div>
+			</div>
+		</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+			<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Menestra de Verduras</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/principalVerdura.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Menestra de Verduras<i class="material-icons right">close</i></span>
+					<p>Mix de verduras variadas que nos aportan vitaminas y minerales. Plato digestivo y fácil de tomar tanto en frío como en caliente. Combínalo con una de nuestras carnes o pescados para conseguir el equilibrio perfecto.</p>
+				</div>
+			</div>
+		</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+			<div class="col s12 m6 l3">
+			<div class="card">
+				<span class="card-title activator grey-text text-darken-4">Crema de Verduras</span>		
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/principalCrema.jpg">
+				</div>
+				<div class="card-content">
+					<div class="fixed-action-btn horizontal" style="position: absolute; display: inline-block; bottom: 14px; right: 14px">
+						<a class="btn-floating btn-large red">
+							<i class="large material-icons">shopping_cart</i>
+						</a>
+						<ul>
+							<li><a class="btn-floating red"><!--<i class="material-icons"></i>-->x4</a></li>
+							<li><a class="btn-floating yellow darken-1"><!--<i class="material-icons">format_quote</i>-->x3</a></li>
+							<li><a class="btn-floating green"><!--<i class="material-icons">publish</i>-->x2</a></li>
+							<li><a class="btn-floating blue"><!--<i class="material-icons">attach_file</i>-->x1</a></li>
+						</ul></div>
+					<!-- <span class="card-title activator grey-text text-darken-4">Ensalada Caprichosa</span>		 -->
+					<!-- <p><a href="#">This is a link</a></p> -->
+				</div>
+				<div class="card-reveal">
+					<span class="card-title white-text text-darken-4">Crema de Verduras<i class="material-icons right">close</i></span>
+					<p>Mix de verduras variadas que nos aportan vitaminas y minerales. Plato digestivo y fácil de tomar tanto en frío como en caliente. Combínalo con una de nuestras carnes o pescados para conseguir el equilibrio perfecto.</p>
+				</div>
+			</div>
+		</div>			
+		</div>
+	</div>
+  </section>
+</div>
+
+<div id="green" class="block teal lighten-4">
+  <nav class="pushpin-demo-nav" data-target="green">
+    <div class="nav-wrapper teal lighten-3 white-text">
+      <div class="container">
+        <a href="#" class="brand-logo teal lighten-3 white-text">Postres</a>
+      </div>
     </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
+  </nav>
     </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
-    </div>
-  </div>
-	 </section>
-	 <section id="carousel hide-on-small-only">
-	  <div class="carousel carousel-slider">
-    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
-    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
-  </div>
-	</section>
-<!--######################################################################################################################################-->       <footer class="page-footer teal lighten-2">
+     <footer class="page-footer teal lighten-2">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">
@@ -114,7 +363,6 @@
             <div class="container">
             &copy; 2014 The Webinator
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
           </div>
         </footer>
 	</body>
